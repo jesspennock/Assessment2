@@ -85,14 +85,17 @@ console.log(canWeDeliver(85206))
 
 // CODE HERE
 const canWeDeliver2 = (zipcode) => {
+   let zipcodeMatch = false
     for(i = 0; i < deliveryAreaZipCodes.length; i++){
         if(deliveryAreaZipCodes[i] === zipcode) {
-            return ("You're in our deliver zone!")
+            zipcodeMatch = true
         }
-        else {
-            return ("Sorry, we can't deliver to that address")
-
-        }
+    }
+    if (zipcodeMatch = true) {
+        return ("You're in our deliver zone!")
+    }
+    else {
+        return ("Sorry, we can't deliver to that address")
     }
 }
 console.log(canWeDeliver2(85213))
@@ -132,7 +135,7 @@ const deals = [
 
 //CODE HERE
 
-deals.title = "10% Off!"
+deals[0].title.replace("15", "10")
 console.log(deals)
 
 
