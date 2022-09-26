@@ -135,7 +135,8 @@ const deals = [
 
 //CODE HERE
 
-deals[0].title.replace("15", "10")
+const newPrice = deals[0].title.replace("15", "10")
+console.log(newPrice)
 console.log(deals)
 
 

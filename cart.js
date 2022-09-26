@@ -35,7 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((previousValue, currentValue) => {return previousValue + currentValue.price}, 0)
+
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,7 +56,11 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (carTotal, couponValue, tax)=> {
+   return (carTotal +  (carTotal * tax)) - couponValue 
+}
 
+console.log(calcFinalPrice(20000, 1000, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,8 +84,10 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
-
+Customer properties will include Name- so the customer can pick up their order, string data type, you would expect your customer to enter letters for this value
+phone number, may be required for a frequent customer card- also so the customer can be contacted with any questions, data type would be number since it's a phone number
+Order Pick up Time, so customer and restaurant timing are aligned, number input (2400 clock time format would account for am and pm)
+Delivery or Pickup, important to know how the customer expects to get their food, boolean value
 */
 
 /*
@@ -88,3 +96,11 @@ const cart = [
 */
 
 //CODE HERE
+customerProperties= {
+    name: "Jessica P",
+    phone: 8011234567,
+    pickupTime: 1200,
+    delivery: true
+}
+
+console.log(customerProperties)
